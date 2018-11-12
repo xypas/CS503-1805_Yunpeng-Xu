@@ -34,7 +34,7 @@ def fetch_price(symbol, producer, topic_name):
 		timestamp = time.time()
 		payload = {'Symbol': str(symbol),
 					'LastTradePrice': str(price),
-					'LastTradeDateTime': str(timestamp)
+					'Timestamp': str(timestamp)
 		}
 		logger.debug('Retrived %s info %s', symbol, payload)
 

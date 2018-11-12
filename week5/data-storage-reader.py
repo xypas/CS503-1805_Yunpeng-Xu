@@ -62,7 +62,7 @@ if __name__ == '__main__':
 		payload = {
 			'Symbol': data[b'family:symbol'].decode(),
 			'LatestTradePrice': data[b'family:trade_price'].decode(),
-			'Timestamp': data[b'family:trade_time'].decode
+			'Timestamp': data[b'family:trade_time'].decode()
 		}
 		logger.debug('Read data from hbase: %s',payload)
 		kafka_producer.send(topic = topic_name, value = json.dumps(payload).encode())

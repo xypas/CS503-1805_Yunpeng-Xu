@@ -7,9 +7,9 @@ const problemService = require('../services/problemService');
 
 //get all problems
 router.get('/problems', (req, res) => {
-	problemService.getProblems()
+	problemService.getProblems()				//this function returns a promise
 		.then(problems => res.json(problems));//"then" means what to do if promise acheives
-});
+});	//res.json(problems): return problems to the caller
 
 // get single problem
 router.get('/problems/:id', (req, res) => {

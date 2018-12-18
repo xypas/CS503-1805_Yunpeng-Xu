@@ -90,7 +90,7 @@ const addProblem = function(newProblem) {
 	});
 }
 
-const modifyProblem = function()
+
 
 module.exports = {
 	getProblems,

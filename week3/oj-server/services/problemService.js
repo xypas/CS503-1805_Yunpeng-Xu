@@ -92,7 +92,7 @@ const addProblem = function(newProblem) {
 
 const modProblem = function(problem){
 	return new Promise((requset, resolve) => {
-		problemMidel.update({name: problem.name}, (err, data) => {
+		problemModel.update({name: problem.name}, (err, data) => {
 			if(!data){
 				reject("Problem does't exist")
 			}
